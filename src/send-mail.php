@@ -12,11 +12,11 @@ $subject= $_POST['subject'];
 $body= $_POST['body']; 
  
 // Connection to DBase  
-$dbc= mysqli_connect($host,$user,$password, $dbase)  
+$conn= mysqli_connect($host,$user,$password, $dbase)  
 or die("Unable to select database"); 
  
 $query= "SELECT * FROM $table"; 
-$result= mysqli_query ($dbc, $query)  
+$result= mysqli_query ($conn, $query)  
 or die ('Error querying database.'); 
  
 while ($row = mysqli_fetch_array($result)) { 
@@ -29,5 +29,5 @@ mail($email, $subject, $msg, 'From:' . $from);
 echo 'Email sent to: ' . $email. '<br>'; 
 } 
  
-mysqli_close($dbc); 
+mysqli_close($conn); 
 ?> 
