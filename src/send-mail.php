@@ -1,17 +1,16 @@
 <?php 
- 
+
 $username = "s9isan01"; 
-    $password = "Grande198210";
-    $server = "localhost"; 
-    $dbname = "s9isan01";
-    $table = "newsletter"; 
+$password = "Grande198210";
+$server = "localhost"; 
+$dbname = "s9isan01";
+$table = "newsletter"; 
  
-$from= 'email_to_be_sent_from';//specify here the address that you want email to be sent from 
+$from= 'anne.isola@hotmail.com';
  
 $subject= $_POST['subject']; 
 $body= $_POST['body']; 
  
-// Connection to DBase  
 $conn= mysqli_connect($host,$user,$password, $dbase)  
 or die("Unable to select database"); 
  
